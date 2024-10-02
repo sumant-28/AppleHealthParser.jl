@@ -10,7 +10,7 @@ Getting the data out of the Apple Health source file to perform statistical anal
 
 ## Existing Approaches
 
-There are existing analyses online to process the data in [R](https://rpubs.com/heidithornton09/AccessingAppleHealthData), [Python](https://github.com/jameno/Simple-Apple-Health-XML-to-CSV) and with a [database](https://github.com/christophhagen/HealthDB). There may be others.
+There are existing analyses online to process the data in [R](https://rpubs.com/heidithornton09/AccessingAppleHealthData), [Python](https://github.com/jameno/Simple-Apple-Health-XML-to-CSV) and with a [database](https://github.com/christophhagen/HealthDB). This not an exhaustive list.
 
 ### Parser
 
