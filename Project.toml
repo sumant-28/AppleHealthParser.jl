@@ -13,6 +13,12 @@ XML = "72c71f33-b9b6-44de-8c94-c961784809e2"
 
 [compat]
 julia = "1.7"
+CSV = "0.10.14"
+DataFrames = "1.7.0"
+OrderedCollections = "1.6.3"
+Revise = "3.6.0"
+StatsBase = "0.34.3"
+XML = "0.3.4"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
