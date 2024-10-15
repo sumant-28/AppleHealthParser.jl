@@ -7,7 +7,6 @@ version = "0.1.0"
 CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 OrderedCollections = "bac558e1-5e72-5ebc-8fee-abe8a469f55d"
-Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
 StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
 XML = "72c71f33-b9b6-44de-8c94-c961784809e2"
 XMLDict = "228000da-037f-5747-90a9-8195ccbf91a5"
@@ -22,6 +21,7 @@ julia = "1.7"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
 
 [targets]
-test = ["Test"]
+test = ["Test", "Revise"]
