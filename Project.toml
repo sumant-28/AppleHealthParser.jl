@@ -18,6 +18,7 @@ DataFrames = "1.7.0"
 OrderedCollections = "1.6.3"
 StatsBase = "0.34.3"
 XML = "0.3.4"
+XMLDict = "0.4"
 julia = "1.7"
 
 [extras]
