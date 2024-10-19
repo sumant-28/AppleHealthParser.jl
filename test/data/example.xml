@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HealthData [
+<!-- HealthKit Export Version: 3 -->
+<!ELEMENT HealthData (ExportDate,Me,(Record|Correlation|Workout|ActivitySummary)*)>
+<!ATTLIST HealthData
+  locale CDATA #REQUIRED
+>
+<!ELEMENT ExportDate EMPTY>
+<!ATTLIST ExportDate
+  value CDATA #REQUIRED
+>
+<!ELEMENT Me EMPTY>
+<!ATTLIST Me
+  HKCharacteristicTypeIdentifierDateOfBirth         CDATA #REQUIRED
+  HKCharacteristicTypeIdentifierBiologicalSex       CDATA #REQUIRED
+  HKCharacteristicTypeIdentifierBloodType           CDATA #REQUIRED
+  HKCharacteristicTypeIdentifierFitzpatrickSkinType CDATA #REQUIRED
+>
+<!ELEMENT Record (MetadataEntry*)>
+<!ATTLIST Record
+  type          CDATA #REQUIRED
+  unit          CDATA #IMPLIED
+  value         CDATA #IMPLIED
+  sourceName    CDATA #REQUIRED
+  sourceVersion CDATA #IMPLIED
+  device        CDATA #IMPLIED
+  creationDate  CDATA #IMPLIED
+  startDate     CDATA #REQUIRED
+  endDate       CDATA #REQUIRED
+>
+<!-- Note: Any Records that appear as children of a correlation also appear as top-level records in this document. -->
+<!ELEMENT Correlation ((MetadataEntry|Record)*)>
+<!ATTLIST Correlation
+  type          CDATA #REQUIRED
+  sourceName    CDATA #REQUIRED
+  sourceVersion CDATA #IMPLIED
+  device        CDATA #IMPLIED
+  creationDate  CDATA #IMPLIED
+  startDate     CDATA #REQUIRED
+  endDate       CDATA #REQUIRED
+>
+<!ELEMENT Workout ((MetadataEntry|WorkoutEvent)*)>
+<!ATTLIST Workout
+  workoutActivityType   CDATA #REQUIRED
+  duration              CDATA #IMPLIED
+  durationUnit          CDATA #IMPLIED
+  totalDistance         CDATA #IMPLIED
+  totalDistanceUnit     CDATA #IMPLIED
+  totalEnergyBurned     CDATA #IMPLIED
+  totalEnergyBurnedUnit CDATA #IMPLIED
+  sourceName            CDATA #REQUIRED
+  sourceVersion         CDATA #IMPLIED
+  device                CDATA #IMPLIED
+  creationDate          CDATA #IMPLIED
+  startDate             CDATA #REQUIRED
+  endDate               CDATA #REQUIRED
+>
+<!ELEMENT WorkoutEvent EMPTY>
+<!ATTLIST WorkoutEvent
+  type CDATA #REQUIRED
+  date CDATA #REQUIRED
+>
+<!ELEMENT ActivitySummary EMPTY>
+<!ATTLIST ActivitySummary
+  dateComponents           CDATA #IMPLIED
+  activeEnergyBurned       CDATA #IMPLIED
+  activeEnergyBurnedGoal   CDATA #IMPLIED
+  activeEnergyBurnedUnit   CDATA #IMPLIED
+  appleExerciseTime        CDATA #IMPLIED
+  appleExerciseTimeGoal    CDATA #IMPLIED
+  appleStandHours          CDATA #IMPLIED
+  appleStandHoursGoal      CDATA #IMPLIED
+>
+<!ELEMENT MetadataEntry EMPTY>
+<!ATTLIST MetadataEntry
+  key   CDATA #REQUIRED
+  value CDATA #REQUIRED
+>
+]>
+<HealthData locale="en_GB">
+    <ExportDate value="2016-04-15 07:27:26 +0100"/>
+    <Me HKCharacteristicTypeIdentifierDateOfBirth="1965-07-31"
+        HKCharacteristicTypeIdentifierBiologicalSex="HKBiologicalSexMale"
+        HKCharacteristicTypeIdentifierBloodType="HKBloodTypeNotSet"
+        HKCharacteristicTypeIdentifierFitzpatrickSkinType="HKFitzpatrickSkinTypeNotSet"/>
+    <Record type="HKQuantityTypeIdentifierHeight"
+            sourceName="Health"
+            sourceVersion="9.2"
+            unit="cm"
+            creationDate="2016-01-02 09:45:10 +0100"
+            startDate="2016-01-02 09:44:00 +0100"
+            endDate="2016-01-02 09:44:00 +0100"
+            value="194">
+     <MetadataEntry key="HKWasUserEntered" value="1"/>
+    </Record>
+    <Record creationDate="2015-01-11 07:40:15 +0000"
+        endDate="2015-01-10 13:39:35 +0000"
+        sourceName="njr iPhone 6s"
+        startDate="2015-01-10 13:39:32 +0000"
+        type="HKQuantityTypeIdentifierStepCount"
+        unit="count"
+        value="4" />
+    <ActivitySummary activeEnergyBurned="0"
+        activeEnergyBurnedGoal="0"
+        activeEnergyBurnedUnit="kcal"
+        appleExerciseTime="0"
+        appleExerciseTimeGoal="30"
+        appleStandHours="0"
+        appleStandHoursGoal="12"
+        dateComponents="2016-03-18" />
+    <ActivitySummary activeEnergyBurned="652.014"
+        activeEnergyBurnedGoal="500"
+        activeEnergyBurnedUnit="kcal"
+        appleExerciseTime="77"
+        appleExerciseTimeGoal="30"
+        appleStandHours="17"
+        appleStandHoursGoal="12"
+        dateComponents="2016-03-20" />
+    <Workout creationDate="2016-04-02 11:12:57 +0100"
+        duration="31.73680251737436"
+        durationUnit="min"
+        endDate="2016-04-02 11:12:22 +0100"
+        sourceName="NJR Apple&#160;Watch"
+        sourceVersion="2.2"
+        startDate="2016-04-02 10:40:38 +0100"
+        totalDistance="0"
+        totalDistanceUnit="km"
+        totalEnergyBurned="139.3170000000021"
+        totalEnergyBurnedUnit="kcal"
+        workoutActivityType="HKWorkoutActivityTypeOther" />
+    <Workout creationDate="2016-04-02 11:12:57 +0100"
+        duration="31.73680251737436"
+        durationUnit="min"
+        endDate="2016-04-02 11:12:22 +0100"
+        sourceName="NJR Apple&#160;Watch"
+        sourceVersion="2.2"
+        startDate="2016-04-02 10:40:38 +0100"
+        totalDistance="0"
+        totalDistanceUnit="km"
+        totalEnergyBurned="139.3170000000021"
+        totalEnergyBurnedUnit="kcal"
+        workoutActivityType="HKWorkoutActivityTypeOther" />
+</HealthData>

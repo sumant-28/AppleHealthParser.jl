@@ -173,8 +173,9 @@ function basic_export(file)
     child_index = return_child_elements(element_tags, element_attributes, element_children)
     print("Finished processing data\n")
     reduced_tags = countmap(element_tags[child_index])
-    file_dictionary = filter(p -> (100000 > last(p) > 5), reduced_tags)
+    file_dictionary = filter(p -> (100000 > last(p) >= 2), reduced_tags)
     file_names = collect(keys(file_dictionary))
+    filter!(x -> !isnothing(x), file_names)
     generate_csv(element_tags,element_attributes,file_names)
     print("Done\n")
 end
@@ -191,14 +192,14 @@ function enhanced_metadata(file)
     print("Finished importing files\n")
     my_indices, my_children = return_child_elements_i(element_tags, element_attributes, element_children)
     final_attributes = attribute_meta(my_children, element_tags, element_attributes, element_children)
-    reduced_tags = countmap(element_tags[my_children])
-    file_dictionary = filter(p -> (100000 > last(p) > 5), reduced_tags)
-    names = collect(keys(file_dictionary))
-    print(names)
+    reduced_tags = countmap(element_tags[my_indices])
+    file_dictionary = filter(p -> (100000 > last(p) >= 2), reduced_tags)
+    file_names = collect(keys(file_dictionary))
+    filter!(x -> !isnothing(x), file_names)
     dictionaries = []
-    for name in names
+    for name in file_names
         indices = findall(.==(name), element_tags)
-        dictionary = element_attributes[my_indices]
+        dictionary = element_attributes[indices]
         push!(dictionaries, dictionary)
     end
     return dictionaries
